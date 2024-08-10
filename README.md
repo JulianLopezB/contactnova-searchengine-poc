@@ -9,7 +9,7 @@ This is a Proof of Concept (POC) for the ContactNova Search Engine, consisting o
 
 ## Prerequisites
 
-- Python 3.9+
+- Python 3.11+
 - Node.js 14+
 - Docker and Docker Compose (optional, for containerized deployment)
 

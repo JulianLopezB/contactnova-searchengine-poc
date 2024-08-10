@@ -41,9 +41,11 @@ function Search() {
         fetchCategories();
     }, []);
 
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8001';
+
     const fetchCategories = async () => {
         try {
-            const response = await axios.get(`http://localhost:8001/categories`);
+            const response = await axios.get(`${API_BASE_URL}/categories`);
             setCategories(response.data);
         } catch (error) {
             console.error("Error fetching categories", error);
@@ -53,7 +55,7 @@ function Search() {
     const handleSearch = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://localhost:8001/search`, {
+            const response = await axios.get(`${API_BASE_URL}/search`, {
                 params: { query, category: selectedCategory }
             });
             setResults(response.data);
@@ -67,7 +69,7 @@ function Search() {
 
     const handleArticleClick = async (articleId) => {
         try {
-            const response = await axios.get(`http://localhost:8001/article/${articleId}`);
+            const response = await axios.get(`${API_BASE_URL}/article/${articleId}`);
             setSelectedArticle(response.data);
         } catch (error) {
             console.error("Error fetching article details", error);
