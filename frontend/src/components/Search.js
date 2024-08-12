@@ -41,7 +41,7 @@ function Search() {
         fetchCategories();
     }, []);
 
-    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8001';
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080';
 
     const fetchCategories = async () => {
         try {
@@ -53,6 +53,13 @@ function Search() {
     };
 
     const handleSearch = async () => {
+        if (!query.trim()) {
+            // Handle empty query
+            setResults([]);
+            setSelectedArticle(null);
+            return;
+        }
+
         setLoading(true);
         try {
             const response = await axios.get(`${API_BASE_URL}/search`, {
@@ -62,6 +69,7 @@ function Search() {
             setSelectedArticle(null);
         } catch (error) {
             console.error("Error fetching search results", error);
+            setResults([]);
         } finally {
             setLoading(false);
         }
@@ -124,35 +132,41 @@ function Search() {
                             <Typography variant="h5" component="h2" gutterBottom sx={{ color: 'secondary.main' }}>
                                 Resultados
                             </Typography>
-                            <List>
-                                {results.map((result, index) => (
-                                    <MotionListItem 
-                                        key={index} 
-                                        button 
-                                        onClick={() => handleArticleClick(result.id)}
-                                        selected={selectedArticle && selectedArticle.id === result.id}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                                        sx={{
-                                            mb: 1,
-                                            borderRadius: '8px',
-                                            '&:hover': {
-                                                backgroundColor: 'rgba(255, 0, 0, 0.1)',
-                                            },
-                                            '&.Mui-selected': {
-                                                backgroundColor: 'rgba(255, 0, 0, 0.2)',
-                                            },
-                                        }}
-                                    >
-                                        <ListItemText 
-                                            primary={result.pregunta}
-                                            secondary={`${result.grupo} - ${result.tema}`}
-                                            primaryTypographyProps={{ fontWeight: 'bold' }}
-                                        />
-                                    </MotionListItem>
-                                ))}
-                            </List>
+                            {results.length > 0 ? (
+                                <List>
+                                    {results.map((result, index) => (
+                                        <MotionListItem 
+                                            key={index} 
+                                            button 
+                                            onClick={() => handleArticleClick(result.id)}
+                                            selected={selectedArticle && selectedArticle.id === result.id}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.3, delay: index * 0.1 }}
+                                            sx={{
+                                                mb: 1,
+                                                borderRadius: '8px',
+                                                '&:hover': {
+                                                    backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                                                },
+                                                '&.Mui-selected': {
+                                                    backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                                                },
+                                            }}
+                                        >
+                                            <ListItemText 
+                                                primary={result.pregunta}
+                                                secondary={`${result.grupo} - ${result.tema}`}
+                                                primaryTypographyProps={{ fontWeight: 'bold' }}
+                                            />
+                                        </MotionListItem>
+                                    ))}
+                                </List>
+                            ) : (
+                                <Typography variant="body1" sx={{ mt: 2 }}>
+                                    {query.trim() ? "No se encontraron resultados." : "Ingrese una consulta para buscar."}
+                                </Typography>
+                            )}
                         </Grid>
                         <Grid item xs={8}>
                             {selectedArticle && <Article article={selectedArticle} />}
