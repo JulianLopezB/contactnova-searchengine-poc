@@ -23,8 +23,8 @@ function Article({ article }) {
                 {article.pregunta}
             </Typography>
             <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
-                <Chip label={`Category: ${article.grupo}`} color="primary" variant="outlined" />
-                <Chip label={`Topic: ${article.tema}`} color="secondary" variant="outlined" />
+                <Chip label={`Grupo: ${article.grupo}`} color="primary" variant="outlined" />
+                <Chip label={`Tema: ${article.tema}`} color="secondary" variant="outlined" />
             </Box>
             <Box sx={{ mt: 2 }}>
                 <Typography component="div" dangerouslySetInnerHTML={{ __html: article.respuesta }} />

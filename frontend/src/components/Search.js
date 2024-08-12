@@ -84,14 +84,14 @@ function Search() {
                 </Box>
                 <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
                     <FormControl fullWidth>
-                        <InputLabel id="category-select-label">Category</InputLabel>
+                        <InputLabel id="category-select-label">Grupo</InputLabel>
                         <Select
                             labelId="category-select-label"
                             value={selectedCategory}
-                            label="Category"
+                            label="Grupo"
                             onChange={(e) => setSelectedCategory(e.target.value)}
                         >
-                            <MenuItem value="">All Categories</MenuItem>
+                            <MenuItem value="">Todos los grupos</MenuItem>
                             {categories.map((category, index) => (
                                 <MenuItem key={index} value={category}>{category}</MenuItem>
                             ))}
@@ -122,7 +122,7 @@ function Search() {
                     <Grid container spacing={3}>
                         <Grid item xs={4}>
                             <Typography variant="h5" component="h2" gutterBottom sx={{ color: 'secondary.main' }}>
-                                Search Results
+                                Resultados
                             </Typography>
                             <List>
                                 {results.map((result, index) => (
