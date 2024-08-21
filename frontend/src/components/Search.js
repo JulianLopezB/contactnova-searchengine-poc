@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import Article from './Article';
 import { 
     Container, TextField, Button, Select, MenuItem, FormControl, 
-    InputLabel, Typography, Box, CircularProgress, Grid, List, ListItem, ListItemText
+    InputLabel, Typography, Box, CircularProgress, Grid, List, ListItem, ListItemText,
+    Switch, FormControlLabel
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, ThemeProvider } from '@mui/material/styles';
@@ -36,25 +37,26 @@ function Search() {
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedArticle, setSelectedArticle] = useState(null);
     const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        fetchCategories();
-    }, []);
+    const [embeddingType, setEmbeddingType] = useState('openai');
+    const [useLLMValidation, setUseLLMValidation] = useState(false);
 
     const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080';
 
-    const fetchCategories = async () => {
+    const fetchCategories = useCallback(async () => {
         try {
             const response = await axios.get(`${API_BASE_URL}/categories`);
             setCategories(response.data);
         } catch (error) {
             console.error("Error fetching categories", error);
         }
-    };
+    }, [API_BASE_URL]);
+
+    useEffect(() => {
+        fetchCategories();
+    }, [fetchCategories]);
 
     const handleSearch = async () => {
         if (!query.trim()) {
-            // Handle empty query
             setResults([]);
             setSelectedArticle(null);
             return;
@@ -62,8 +64,13 @@ function Search() {
 
         setLoading(true);
         try {
-            const response = await axios.get(`${API_BASE_URL}/search`, {
-                params: { query, category: selectedCategory }
+            const endpoint = useLLMValidation ? 'search-with-ai-validation' : 'search';
+            const response = await axios.get(`${API_BASE_URL}/${endpoint}`, {
+                params: { 
+                    query, 
+                    category: selectedCategory, 
+                    embedding_type: embeddingType
+                }
             });
             setResults(response.data);
             setSelectedArticle(null);
@@ -77,7 +84,9 @@ function Search() {
 
     const handleArticleClick = async (articleId) => {
         try {
-            const response = await axios.get(`${API_BASE_URL}/article/${articleId}`);
+            const response = await axios.get(`${API_BASE_URL}/article/${articleId}`, {
+                params: { embedding_type: embeddingType }
+            });
             setSelectedArticle(response.data);
         } catch (error) {
             console.error("Error fetching article details", error);
@@ -105,6 +114,19 @@ function Search() {
                             ))}
                         </Select>
                     </FormControl>
+                    <FormControl fullWidth>
+                        <InputLabel id="embedding-type-label">Embedding Type</InputLabel>
+                        <Select
+                            labelId="embedding-type-label"
+                            value={embeddingType}
+                            label="Embedding Type"
+                            onChange={(e) => setEmbeddingType(e.target.value)}
+                        >
+                            {/* <MenuItem value="openai">OpenAI</MenuItem> */}
+                            <MenuItem value="openai-large">OpenAI-Large</MenuItem>
+                            <MenuItem value="fasttext">FastText</MenuItem>
+                        </Select>
+                    </FormControl>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -120,6 +142,18 @@ function Search() {
                     >
                         <SearchIcon />
                     </StyledButton>
+                </Box>
+                <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 2 }}>
+                    <FormControlLabel
+                        control={
+                            <Switch
+                                checked={useLLMValidation}
+                                onChange={(e) => setUseLLMValidation(e.target.checked)}
+                                color="primary"
+                            />
+                        }
+                        label="LLM Validation"
+                    />
                 </Box>
                 {loading && (
                     <Box sx={{ display: 'flex', justifyContent: 'center', my: 4 }}>
