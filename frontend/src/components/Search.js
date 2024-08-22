@@ -37,8 +37,6 @@ function Search() {
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedArticle, setSelectedArticle] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [embeddingType, setEmbeddingType] = useState('openai');
-    const [useLLMValidation, setUseLLMValidation] = useState(false);
 
     const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080';
 
@@ -64,12 +62,10 @@ function Search() {
 
         setLoading(true);
         try {
-            const endpoint = useLLMValidation ? 'search-with-ai-validation' : 'search';
-            const response = await axios.get(`${API_BASE_URL}/${endpoint}`, {
+            const response = await axios.get(`${API_BASE_URL}/search`, {
                 params: { 
                     query, 
-                    category: selectedCategory, 
-                    embedding_type: embeddingType
+                    category: selectedCategory
                 }
             });
             setResults(response.data);
@@ -84,9 +80,7 @@ function Search() {
 
     const handleArticleClick = async (articleId) => {
         try {
-            const response = await axios.get(`${API_BASE_URL}/article/${articleId}`, {
-                params: { embedding_type: embeddingType }
-            });
+            const response = await axios.get(`${API_BASE_URL}/article/${articleId}`);
             setSelectedArticle(response.data);
         } catch (error) {
             console.error("Error fetching article details", error);
@@ -114,19 +108,6 @@ function Search() {
                             ))}
                         </Select>
                     </FormControl>
-                    <FormControl fullWidth>
-                        <InputLabel id="embedding-type-label">Embedding Type</InputLabel>
-                        <Select
-                            labelId="embedding-type-label"
-                            value={embeddingType}
-                            label="Embedding Type"
-                            onChange={(e) => setEmbeddingType(e.target.value)}
-                        >
-                            {/* <MenuItem value="openai">OpenAI</MenuItem> */}
-                            <MenuItem value="openai-large">OpenAI-Large</MenuItem>
-                            <MenuItem value="fasttext">FastText</MenuItem>
-                        </Select>
-                    </FormControl>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -142,18 +123,6 @@ function Search() {
                     >
                         <SearchIcon />
                     </StyledButton>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 2 }}>
-                    <FormControlLabel
-                        control={
-                            <Switch
-                                checked={useLLMValidation}
-                                onChange={(e) => setUseLLMValidation(e.target.checked)}
-                                color="primary"
-                            />
-                        }
-                        label="LLM Validation"
-                    />
                 </Box>
                 {loading && (
                     <Box sx={{ display: 'flex', justifyContent: 'center', my: 4 }}>
