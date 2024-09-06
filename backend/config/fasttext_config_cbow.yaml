@@ -1,0 +1,8 @@
+model: cbow
+dim: 300
+epoch: 15
+lr: 0.05
+wordNgrams: 2
+minn: 2
+maxn: 5
+thread: 4
