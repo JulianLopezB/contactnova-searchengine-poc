@@ -36,15 +36,15 @@ class FastTextTrainer:
 
         texts = self.get_preprocessed_texts()
 
-        with mlflow.start_run():
-            temp_file_path = None
-            model_file_path = None
-            try:
-                with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', delete=False) as temp_file:
-                    for text in texts:
-                        temp_file.write(f"{text}\n")
-                    temp_file_path = temp_file.name
+        temp_file_path = None
+        model_file_path = None
+        try:
+            with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', delete=False) as temp_file:
+                for text in texts:
+                    temp_file.write(f"{text}\n")
+                temp_file_path = temp_file.name
 
+            with mlflow.start_run():
                 model = fasttext.train_unsupervised(
                     temp_file_path,
                     model=self.config['model'],
@@ -74,20 +74,16 @@ class FastTextTrainer:
                 model.save_model(model_file_path)
                 mlflow.log_artifact(model_file_path, "model")
 
-                # Save the model
-                model.save_model(self.model_path)
-                return model
+            # Save the model outside of the mlflow run
+            model.save_model(self.model_path)
+            return model
 
-            finally:
-                # Clean up temporary files
-                if temp_file_path and os.path.exists(temp_file_path):
-                    os.unlink(temp_file_path)
-                if model_file_path and os.path.exists(model_file_path):
-                    os.unlink(model_file_path)
-
-        # Save the model
-        model.save_model(self.model_path)
-        return model
+        finally:
+            # Clean up temporary files
+            if temp_file_path and os.path.exists(temp_file_path):
+                os.unlink(temp_file_path)
+            if model_file_path and os.path.exists(model_file_path):
+                os.unlink(model_file_path)
 
     def evaluate_semantic_similarity(self, model):
         word_pairs = [

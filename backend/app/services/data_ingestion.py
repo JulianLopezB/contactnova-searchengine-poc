@@ -103,7 +103,7 @@ class DataIngestionService:
         df = pd.read_excel(self.file_path)
         df = df[df['obsoleto'].isna()]
         df = df[df['revisado'] == 's']
-        return df.reset_index(drop=True).head(10)
+        return df.reset_index(drop=True)
 
     def _process_row(self, row):
         pregunta_html = str(row['pregunta'])

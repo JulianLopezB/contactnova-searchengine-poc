@@ -1,0 +1,8 @@
+model: skipgram
+dim: 100
+epoch: 5
+lr: 0.1
+wordNgrams: 1
+minn: 2
+maxn: 4
+thread: 4
