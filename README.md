@@ -40,7 +40,7 @@ To deploy the entire application using Docker:
    docker-compose up --build
    ```
 
-3. Access the frontend at `http://localhost:3000` and the backend API at `http://localhost:8000`
+3. Access the frontend at `http://localhost:3000` and the backend API at `http://localhost:8001`
 
 ## Development
 

@@ -21,8 +21,8 @@ wheels/
 *.egg
 
 # Environments
-.env
-.venv
+# .env
+# .venv
 env/
 venv/
 ENV/
@@ -76,3 +76,6 @@ yarn-error.log*
 
 # React build
 frontend/build/
+
+# MLFlow
+backend/mlruns/

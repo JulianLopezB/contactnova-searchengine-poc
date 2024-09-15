@@ -1,0 +1,351 @@
+
+### Consulta 1:
+**Consulta:** Reclamar multa del confinamiento
+**Resultados:**
+1. 4583
+2. 2977
+3. 951
+4. 6662
+5. 1444
+
+### Consulta 2:
+**Consulta:** Ayuda para negocio cerrado
+**Resultados:**
+1. 4518
+2. 2977
+3. 6662
+4. 4583
+5. 958
+
+### Consulta 3:
+**Consulta:** Renovar tarjeta náutica
+**Resultados:**
+1. 1444
+2. 3010
+3. 4518
+4. 958
+5. 2977
+
+### Consulta 4:
+**Consulta:** Certificado de gastos profesionales
+**Resultados:**
+1. 958
+2. 2977
+3. 4518
+4. 6662
+5. 3010
+
+### Consulta 5:
+**Consulta:** Festivos en Galicia
+**Resultados:**
+1. 3010
+2. 2977
+3. 4518
+4. 958
+5. 1444
+
+### Consulta 6:
+**Consulta:** Problemas con punto de consumo
+**Resultados:**
+1. 5853
+2. 2977
+3. 6662
+4. 951
+5. 4583
+
+### Consulta 7:
+**Consulta:** Protocolo COVID para deportes
+**Resultados:**
+1. 2977
+2. 6662
+3. 4518
+4. 1444
+5. 3010
+
+### Consulta 8:
+**Consulta:** Pago tasa de industria CIXTEC
+**Resultados:**
+1. 345
+2. 4518
+3. 6662
+4. 1444
+5. 958
+
+### Consulta 9:
+**Consulta:** Ayuda Plan Xogade
+**Resultados:**
+1. 951
+2. 2977
+3. 6662
+4. 4583
+5. 1444
+
+### Consulta 10:
+**Consulta:** Cierre de negocio nocturno
+**Resultados:**
+1. 4518
+2. 2977
+3. 958
+4. 6662
+5. 3010
+
+### Consulta 11:
+**Consulta:** Festivos nacionales del año
+**Resultados:**
+1. 3010
+2. 2977
+3. 4518
+4. 1444
+5. 345
+
+### Consulta 12:
+**Consulta:** Solicitar devolución de multa
+**Resultados:**
+1. 4583
+2. 2977
+3. 951
+4. 6662
+5. 1444
+
+### Consulta 13:
+**Consulta:** Renovación de tarjeta marítima
+**Resultados:**
+1. 1444
+2. 3010
+3. 4518
+4. 958
+5. 2977
+
+### Consulta 14:
+**Consulta:** Obtener certificado de gastos
+**Resultados:**
+1. 958
+2. 2977
+3. 4518
+4. 6662
+5. 3010
+
+### Consulta 15:
+**Consulta:** Normas COVID para deportes
+**Resultados:**
+1. 2977
+2. 6662
+3. 4518
+4. 1444
+5. 3010
+
+### Consulta 16:
+**Consulta:** Pago tasas de industria en CIXTEC
+**Resultados:**
+1. 345
+2. 4518
+3. 6662
+4. 1444
+5. 958
+
+### Consulta 17:
+**Consulta:** Problema con sistema de consumo
+**Resultados:**
+1. 5853
+2. 2977
+3. 6662
+4. 951
+5. 4583
+
+### Consulta 18:
+**Consulta:** Ayuda cierre nocturno en fiestas
+**Resultados:**
+1. 4518
+2. 2977
+3. 958
+4. 6662
+5. 3010
+
+### Consulta 19:
+**Consulta:** Sanciones estado de alarma
+**Resultados:**
+1. 4583
+2. 2977
+3. 951
+4. 6662
+5. 1444
+
+### Consulta 20:
+**Consulta:** Apoyo para Plan Xogade
+**Resultados:**
+1. 951
+2. 2977
+3. 6662
+4. 4583
+5. 1444
+
+### Consulta 21:
+**Consulta:** Calendario laboral Galicia
+**Resultados:**
+1. 3010
+2. 2977
+3. 4518
+4. 958
+5. 1444
+
+### Consulta 22:
+**Consulta:** Documentos para renovar tarjeta marítima
+**Resultados:**
+1. 1444
+2. 3010
+3. 4518
+4. 958
+5. 2977
+
+### Consulta 23:
+**Consulta:** Solicitud de ayuda Plan Xogade
+**Resultados:**
+1. 951
+2. 2977
+3. 6662
+4. 4583
+5. 1444
+
+### Consulta 24:
+**Consulta:** Problemas con sistema Siguc
+**Resultados:**
+1. 5853
+2. 2977
+3. 6662
+4. 951
+5. 4583
+
+### Consulta 25:
+**Consulta:** Medidas para deportes durante pandemia
+**Resultados:**
+1. 2977
+2. 6662
+3. 4518
+4. 1444
+5. 3010
+
+### Consulta 26:
+**Consulta:** Pago tasa de industria en CIXTEC
+**Resultados:**
+1. 345
+2. 4518
+3. 6662
+4. 1444
+5. 958
+
+### Consulta 27:
+**Consulta:** Documentos para reclamar multa
+**Resultados:**
+1. 4583
+2. 2977
+3. 951
+4. 6662
+5. 1444
+
+### Consulta 28:
+**Consulta:** Festivos autonómicos en Galicia
+**Resultados:**
+1. 3010
+2. 2977
+3. 4518
+4. 958
+5. 1444
+
+### Consulta 29:
+**Consulta:** Protocolo FISIOCOVID para deportes
+**Resultados:**
+1. 2977
+2. 6662
+3. 4518
+4. 1444
+5. 3010
+
+### Consulta 30:
+**Consulta:** Requisitos para pagar tasas de industria
+**Resultados:**
+1. 345
+2. 4518
+3. 6662
+4. 1444
+5. 958
+
+### Consulta 31:
+**Consulta:** Certificado de gastos de arbitraje
+**Resultados:**
+1. 958
+2. 2977
+3. 4518
+4. 6662
+5. 3010
+
+### Consulta 32:
+**Consulta:** Renovación tarjeta identidad náutica
+**Resultados:**
+1. 1444
+2. 3010
+3. 4518
+4. 958
+5. 2977
+
+### Consulta 33:
+**Consulta:** Ayuda para cierre nocturno Navidad
+**Resultados:**
+1. 4518
+2. 2977
+3. 958
+4. 6662
+5. 3010
+
+### Consulta 34:
+**Consulta:** Solución a sanciones estado de alarma
+**Resultados:**
+1. 4583
+2. 2977
+3. 951
+4. 6662
+5. 1444
+
+### Consulta 35:
+**Consulta:** Ayuda con Plan Xogade
+**Resultados:**
+1. 951
+2. 2977
+3. 6662
+4. 4583
+5. 1444
+
+### Consulta 36:
+**Consulta:** Pago tasas de industria en CIXTEC
+**Resultados:**
+1. 345
+2. 4518
+3. 6662
+4. 1444
+5. 958
+
+### Consulta 37:
+**Consulta:** Festivos de Galicia
+**Resultados:**
+1. 3010
+2. 2977
+3. 4518
+4. 958
+5. 1444
+
+### Consulta 38:
+**Consulta:** Problemas con Plan Xogade
+**Resultados:**
+1. 951
+2. 2977
+3. 6662
+4. 4583
+5. 1444
+
+### Consulta 39:
+**Consulta:** Protocolo FISIOCOVID para deportes
+**Resultados:**
+1. 2977
+2. 6662
+3. 4518
+4. 1444
+5. 3010

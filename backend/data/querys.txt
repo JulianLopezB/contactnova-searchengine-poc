@@ -1,0 +1,401 @@
+
+Consulta 1:
+Consulta: ¿Cómo solicitar una devolución de sanciones por infracciones durante el estado de alarma? Resultados:
+
+4583
+2977
+4518
+951
+6662
+Consulta 2:
+Consulta: ¿Dónde encontrar información sobre las ayudas para el cierre del ocio nocturno en Navidad? Resultados:
+
+4518
+2977
+6662
+4583
+958
+Consulta 3:
+Consulta: ¿Qué hacer si necesito un certificado de gastos de arbitraje y mutualidad? Resultados:
+
+958
+2977
+4518
+6662
+345
+Consulta 4:
+Consulta: ¿Cuáles son los festivos autonómicos en Galicia para 2021? Resultados:
+
+3010
+2977
+4518
+958
+345
+Consulta 5:
+Consulta: ¿Cómo renovar la tarjeta de identidad marítima náutica de ocio? Resultados:
+
+1444
+4518
+3010
+958
+345
+Consulta 6:
+Consulta: ¿Qué hacer en caso de problemas con el punto de consumo en Siguc? Resultados:
+
+5853
+2977
+6662
+951
+4583
+Consulta 7:
+Consulta: ¿Dónde encontrar el protocolo FISIOCOVID para el deporte federado? Resultados:
+
+2977
+3010
+4518
+6662
+1444
+Consulta 8:
+Consulta: ¿Cómo se realiza el pago de tasas de industria en la plataforma CIXTEC? Resultados:
+
+345
+4518
+6662
+1444
+3010
+Consulta 9:
+Consulta: ¿Cómo contactar con Deportes de la Xunta para consultas del Plan Xogade? Resultados:
+
+951
+2977
+6662
+4583
+1444
+Consulta 10:
+Consulta: ¿Qué pasos seguir para solicitar ayuda por el cierre del ocio nocturno? Resultados:
+
+4518
+2977
+6662
+4583
+958
+Consulta 11:
+Consulta: ¿Cuándo son los festivos nacionales en España para el 2021? Resultados:
+
+3010
+2977
+4518
+1444
+345
+Consulta 12:
+Consulta: ¿Cómo presentar una solicitud para devolución de sanciones de movilidad? Resultados:
+
+4583
+2977
+951
+6662
+1444
+Consulta 13:
+Consulta: ¿Dónde encontrar información sobre la renovación de la tarjeta marítima? Resultados:
+
+1444
+3010
+4518
+958
+2977
+Consulta 14:
+Consulta: ¿Cómo se solicita un certificado de gastos a través de la intranet? Resultados:
+
+958
+2977
+4518
+6662
+3010
+Consulta 15:
+Consulta: ¿Cuál es el protocolo para manejar el COVID-19 en deportes federados? Resultados:
+
+2977
+6662
+4518
+1444
+3010
+Consulta 16:
+Consulta: ¿Qué requisitos técnicos se actualizan para el pago de tasas de industria? Resultados:
+
+345
+4518
+6662
+1444
+958
+Consulta 17:
+Consulta: ¿Qué hacer si hay un error al crear un punto de consumo? Resultados:
+
+5853
+2977
+951
+4583
+6662
+Consulta 18:
+Consulta: ¿Cuáles son los pasos para solicitar ayudas por cierre nocturno en Navidad? Resultados:
+
+4518
+2977
+958
+6662
+3010
+Consulta 19:
+Consulta: ¿Qué información está disponible sobre las sanciones del estado de alarma? Resultados:
+
+4583
+2977
+951
+6662
+1444
+Consulta 20:
+Consulta: ¿Cómo se manejan las incidencias relacionadas con el sistema Siguc? Resultados:
+
+5853
+2977
+6662
+4518
+951
+Consulta 21:
+Consulta: ¿Dónde se puede consultar el calendario laboral para Galicia en 2021? Resultados:
+
+3010
+2977
+4518
+958
+1444
+Consulta 22:
+Consulta: ¿Cuáles son los documentos necesarios para solicitar la renovación de una tarjeta marítima? Resultados:
+
+1444
+3010
+4518
+958
+2977
+Consulta 23:
+Consulta: ¿Qué hacer si se necesita asistencia con el Plan Xogade? Resultados:
+
+951
+2977
+6662
+4583
+1444
+Consulta 24:
+Consulta: ¿Cómo contactar con la Xunta de Galicia para problemas con el sistema Siguc? Resultados:
+
+5853
+2977
+6662
+951
+4583
+Consulta 25:
+Consulta: ¿Qué medidas se establecen para el deporte federado durante la crisis sanitaria? Resultados:
+
+2977
+6662
+4518
+1444
+3010
+Consulta 26:
+Consulta: ¿Cómo se gestiona el pago de tasas en la plataforma CIXTEC? Resultados:
+
+345
+4518
+6662
+1444
+3010
+Consulta 27:
+Consulta: ¿Qué documentos se necesitan para la solicitud de devoluciones de multas? Resultados:
+
+4583
+2977
+951
+6662
+1444
+Consulta 28:
+Consulta: ¿Cuándo se publican los festivos autonómicos en Galicia para el año 2021? Resultados:
+
+3010
+2977
+4518
+958
+1444
+Consulta 29:
+Consulta: ¿Dónde se puede encontrar el protocolo FISIOCOVID para el deporte? Resultados:
+
+2977
+6662
+4518
+1444
+3010
+Consulta 30:
+Consulta: ¿Cómo se realiza el pago de tasas de industria en el CIXTEC? Resultados:
+
+345
+4518
+6662
+1444
+958
+Consulta 31:
+Consulta: ¿Qué pasos seguir para solicitar un certificado de gastos a través de la intranet? Resultados:
+
+958
+2977
+4518
+6662
+3010
+Consulta 32:
+Consulta: ¿Cómo se solicita la devolución de sanciones del estado de alarma? Resultados:
+
+4583
+2977
+951
+6662
+1444
+Consulta 33:
+Consulta: ¿Cómo renovar la tarjeta de identidad marítima náutica de ocio? Resultados:
+
+1444
+3010
+4518
+958
+2977
+Consulta 34:
+Consulta: ¿Dónde encontrar la información sobre ayudas al ocio nocturno en Navidad? Resultados:
+
+4518
+2977
+6662
+4583
+958
+Consulta 35:
+Consulta: ¿Cómo contactar con el departamento de Deportes para el Plan Xogade? Resultados:
+
+951
+2977
+6662
+4583
+1444
+Consulta 36:
+Consulta: ¿Cuáles son los festivos autonómicos en Galicia para el 2021? Resultados:
+
+3010
+2977
+4518
+958
+1444
+Consulta 37:
+Consulta: ¿Cómo se gestionan las incidencias en el sistema Siguc? Resultados:
+
+5853
+2977
+6662
+951
+4583
+Consulta 38:
+Consulta: ¿Dónde consultar el protocolo FISIOCOVID para federaciones deportivas? Resultados:
+
+2977
+6662
+4518
+1444
+3010
+Consulta 39:
+Consulta: ¿Qué requisitos técnicos son necesarios para el pago de tasas de industria? Resultados:
+
+345
+4518
+6662
+1444
+958
+Consulta 40:
+Consulta: ¿Qué hacer si hay un error en la creación de un punto de consumo en Siguc? Resultados:
+
+5853
+2977
+951
+4583
+6662
+Consulta 41:
+Consulta: ¿Cómo se solicita un certificado de gastos de arbitraje y mutualidad? Resultados:
+
+958
+2977
+4518
+6662
+3010
+Consulta 42:
+Consulta: ¿Cómo obtener información sobre la renovación de tarjetas marítimas? Resultados:
+
+1444
+3010
+4518
+958
+2977
+Consulta 43:
+Consulta: ¿Qué pasos seguir para solicitar ayudas para el cierre nocturno en Navidad? Resultados:
+
+4518
+2977
+958
+6662
+3010
+Consulta 44:
+Consulta: ¿Dónde encontrar información sobre las sanciones del estado de alarma? Resultados:
+
+4583
+2977
+951
+6662
+1444
+Consulta 45:
+Consulta: ¿Qué hacer si se necesita asistencia con el Plan Xogade? Resultados:
+
+951
+2977
+6662
+4583
+1444
+Consulta 46:
+Consulta: ¿Cómo se maneja el pago de tasas de industria en CIXTEC? Resultados:
+
+345
+4518
+6662
+1444
+958
+Consulta 47:
+Consulta: ¿Cuándo se publican los festivos autonómicos en Galicia? Resultados:
+
+3010
+2977
+4518
+958
+1444
+Consulta 48:
+Consulta: ¿Cómo contactar con el equipo de soporte para problemas en Siguc? Resultados:
+
+5853
+2977
+6662
+951
+4583
+Consulta 49:
+Consulta: ¿Qué requisitos técnicos se actualizan para el pago de tasas en CIXTEC? Resultados:
+
+345
+4518
+6662
+1444
+958
+Consulta 50:
+Consulta: ¿Dónde encontrar el protocolo FISIOCOVID para el deporte federado? Resultados:
+
+2977
+6662
+4518
+1444
+3010

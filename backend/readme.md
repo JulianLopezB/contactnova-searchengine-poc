@@ -5,18 +5,48 @@ This is the backend component of the ContactNova Search Engine POC, built with F
 ## Features
 
 - Vector-based search using Qdrant
-- FastText model for text embedding
-- Data ingestion from Excel files
+- Multiple embedding models support (FastText and Transformer-based)
+- Data ingestion and preprocessing
+- Evaluation of embedding models
 - Dockerized application for easy deployment
 
 ## Prerequisites
 
-- Python 3.9+
+- Python 3.11+
 - Docker (optional)
 
 ## Setup and Running
 
-### Using Docker (recommended)
+### Evaluating and Implementing the Engine
+
+1. Evaluate the engine using different configurations:
+   ```
+   python evaluate_engine.py config/fasttext_config.yaml
+   python evaluate_engine.py config/transformer_config.yaml
+   ```
+
+2. Implement the engine (uses environment variables for configuration):
+   ```
+   python implement_engine.py
+   ```
+
+### Running the API
+
+#### Using Python
+
+1. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. Start the FastAPI server:
+   ```
+   python run.py
+   ```
+
+3. The API will be available at `http://localhost:8001`.
+
+#### Using Docker
 
 1. Build and run using Docker Compose:
    ```
@@ -25,37 +55,20 @@ This is the backend component of the ContactNova Search Engine POC, built with F
 
 2. The API will be available at `http://localhost:8000`.
 
-### Without Docker
-
-1. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-2. Run the data ingestion script:
-   ```
-   python ingest_data.py /path/to/your/bc_datos.xlsx
-   ```
-
-3. Start the FastAPI server:
-   ```
-   python run.py
-   ```
-
-4. The API will be available at `http://localhost:8000`.
-
 ## API Endpoints
 
 - `/search`: Perform a vector search
 - `/categories`: Get available categories
+- `/article/{article_id}`: Get a specific article
 
-For detailed API documentation, visit `http://localhost:8000/docs` after starting the application.
+For detailed API documentation, visit `http://localhost:8001/docs` after starting the application.
 
 ## Development
 
-- Main application code is in the `app` directory
-- API routes are defined in `app/api/routes/search.py`
-- Core search functionality is in `app/services/search_service.py`
+- Main application code is in the `search_engine` directory
+- API routes are defined in `search_engine/api/routes/search.py`
+- Core search functionality is in `search_engine/search/search_service.py`
+- Evaluation logic is in `search_engine/evaluation/evaluator.py`
 
 ## License
 

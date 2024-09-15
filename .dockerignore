@@ -49,8 +49,8 @@ ehthumbs.db
 Thumbs.db
 
 # Project specific
-vector_db/
-fasttext_model.bin
+# vector_db/
+# fasttext_model.bin
 *.xlsx
 *.csv
 
