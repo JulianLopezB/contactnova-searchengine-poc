@@ -28,7 +28,7 @@ class SearchService:
         filter_conditions = []
         if category:
             filter_conditions.append(
-                models.FieldCondition(key="category", match=models.MatchValue(value=category))
+                models.FieldCondition(key="grupo", match=models.MatchValue(value=int(category)))
             )
             
         search_result = self.client.search(
@@ -37,7 +37,8 @@ class SearchService:
             query_filter=models.Filter(must=filter_conditions) if filter_conditions else None,
             limit=limit * 2,  # Increase the limit to account for filtering
             score_threshold=threshold,
-            search_params=models.SearchParams(hnsw_ef=self.hnsw_ef)
+            # search_params=models.SearchParams(hnsw_ef=self.hnsw_ef),
+            search_params=models.SearchParams(hnsw_ef=32),
         )
         
         results = [
@@ -73,21 +74,6 @@ class SearchService:
         
         logger.info(f"Retrieved {len(categories)} categories")
         return sorted(list(categories))
-
-    # def get_categories(self):
-    #         logger.info("Fetching categories")
-    #         groups = self.client.scroll(
-    #             collection_name=self.collection_name,
-    #             # scroll_filter=Filter(),
-    #             limit=int(os.getenv("CATEGORY_SCROLL_LIMIT", 10000)),
-    #             with_payload=True,
-    #             with_vectors=False
-    #         )[0]
-            
-    #         unique_groups = set(point.payload.get("grupo") for point in groups if "grupo" in point.payload.get("metadata", {}))
-    #         logger.info(f"Retrieved {len(unique_groups)} categories")
-    #         breakpoint()
-    #         return sorted(list(unique_groups))
 
     def get_article(self, article_id: str) -> Optional[Dict]:
         try:

@@ -13,7 +13,7 @@ class TransformerEmbedding(BaseEmbedding):
         self.load_or_train_model()
 
     def load_or_train_model(self):
-        model_name = self.config.get('model_name', 'bert-base-uncased')
+        model_name = self.config.get('model_name')
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, clean_up_tokenization_spaces=True)
         self.model = AutoModel.from_pretrained(model_name)
 
@@ -51,7 +51,7 @@ class TransformerEmbedding(BaseEmbedding):
         for i, item in enumerate(tqdm(self.training_data, desc="Generating embeddings")):
             embedding = self.embed_query(item['text'])
             embeddings_with_data.append({
-                'id': str(i),
+                'original_id': str(i),
                 'text': item['text'],
                 'embedding': embedding,
                 'pregunta': item['pregunta'],

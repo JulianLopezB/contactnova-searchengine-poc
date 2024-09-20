@@ -57,7 +57,7 @@ class Evaluator:
         articles, rankings = self.load_articles_and_rankings(articles_file, rankings_file)
         
         logger.info("Computing article embeddings")
-        article_embeddings = {article_id: self.embedding.embed_query(text) for article_id, text in tqdm(articles.items(), desc="Embedding articles")}
+        article_embeddings = {article_id: self.embedding.embed_query(article['text']) for article_id, article in tqdm(articles.items(), desc="Embedding articles")}
 
         predictions = []
         ground_truth = []
