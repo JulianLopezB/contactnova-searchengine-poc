@@ -4,6 +4,7 @@ from typing import List, Dict, Optional
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
 from ..embeddings.base_embedding import BaseEmbedding
+from ..utils.text_preprocessing import preprocess_text
 
 logger = logging.getLogger(__name__)
 
@@ -19,7 +20,12 @@ class SearchService:
         self.client = QdrantClient(path=self.qdrant_path)
 
     def search(self, query: str, category: str = None, limit: int = None, threshold: float = None) -> List[Dict]:
-        query_vector = self.embedding.embed_query(query)
+        
+        # Preprocess the query
+        preprocessed_query = preprocess_text(query)
+        
+        # Embed the preprocessed query
+        query_vector = self.embedding.embed_query(preprocessed_query)
         
         # Use default values if not provided
         limit = limit if limit is not None else self.default_search_limit
