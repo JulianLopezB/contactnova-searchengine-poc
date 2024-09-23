@@ -26,11 +26,11 @@ class FastTextEmbedding(BaseEmbedding):
         else:
             raise ValueError("No model path or training data provided")
 
-    def train(self, texts: List[str]):
+    def train(self, articles: List[dict]):
         # Prepare training data
         with open("temp_training_data.txt", "w", encoding="utf-8") as f:
-            for text in texts:
-                f.write(f"{text['text']}\n")
+            for article in articles:
+                f.write(f"{article['text']}\n")
 
         # Train the model
         model = fasttext.train_unsupervised(
@@ -68,15 +68,14 @@ class FastTextEmbedding(BaseEmbedding):
             raise ValueError("No training data available")
         
         embeddings_with_data = []
-        for i, text in enumerate(tqdm(self.training_data, desc="Generating embeddings")):
-            embedding = self.embed_query(text['text'])
+        for i, item in enumerate(tqdm(self.training_data, desc="Generating embeddings")):
+            embedding = self.embed_query(item['text'])
             embeddings_with_data.append({
-                'id': str(i),
-                'text': text['text'],
+                'original_id': str(i),
+                'text': item['text'],
                 'embedding': embedding,
-                'pregunta': text['pregunta'],
-                'respuesta': text['respuesta'],
-                'grupo': text['grupo']
-
+                'pregunta': item['pregunta'],
+                'respuesta': item['respuesta'],
+                'grupo': item['grupo']
             })
         return embeddings_with_data

@@ -22,10 +22,12 @@ config_file_path = os.getenv("CONFIG_FILE_PATH")
 with open(config_file_path, "r") as file:
     config = yaml.safe_load(file)
 
+embedding_config = config['embedding']['config']
+
 if embedding_type == "fasttext":
-    embedding_model = FastTextEmbedding(config=config)
+    embedding_model = FastTextEmbedding(config=embedding_config)
 elif embedding_type == "transformer":
-    embedding_model = TransformerEmbedding(config=config)
+    embedding_model = TransformerEmbedding(config=embedding_config)
 else:
     raise ValueError(f"Unsupported embedding type: {embedding_type}")
 
@@ -38,7 +40,7 @@ search_service = SearchService(embedding=embedding_model)
 async def semantic_search(
     query: str,
     category: str = None,
-    limit: int = 5,
+    limit: int = None,
     threshold: float = None
 ):
     try:
