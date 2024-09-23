@@ -23,7 +23,7 @@ class DataPreprocessor:
         df = pd.read_excel(self.file_path)
         df = df[df['obsoleto'].isna()]
         df = df[df['revisado'] == 's']
-        df = df.dropna(subset=['pregunta','respuesta']) # delete rows with nan in pregunta respuesta
+        df = df.dropna(subset=['pregunta','respuesta']) # delete rows with nan in pregunta respuesta.
         return df.reset_index(drop=True)
 
     def _process_row(self, row):
