@@ -17,10 +17,12 @@ class FastTextEmbedding(BaseEmbedding):
 
     def load_or_train_model(self):
         model_path = self.config.get('model_path')
-        if model_path:
+        if model_path is not None:
             return self.load_model(model_path)
         elif self.training_data:
-            return self.train(self.training_data)
+            self.model=self.train(self.training_data)
+            self.model.save_model("fasttext_model.bin")
+            return self.model
         else:
             raise ValueError("No model path or training data provided")
 
@@ -28,7 +30,7 @@ class FastTextEmbedding(BaseEmbedding):
         # Prepare training data
         with open("temp_training_data.txt", "w", encoding="utf-8") as f:
             for text in texts:
-                f.write(f"{text}\n")
+                f.write(f"{text['text']}\n")
 
         # Train the model
         model = fasttext.train_unsupervised(
@@ -67,10 +69,14 @@ class FastTextEmbedding(BaseEmbedding):
         
         embeddings_with_data = []
         for i, text in enumerate(tqdm(self.training_data, desc="Generating embeddings")):
-            embedding = self.embed_query(text)
+            embedding = self.embed_query(text['text'])
             embeddings_with_data.append({
                 'id': str(i),
-                'text': text,
-                'embedding': embedding
+                'text': text['text'],
+                'embedding': embedding,
+                'pregunta': text['pregunta'],
+                'respuesta': text['respuesta'],
+                'grupo': text['grupo']
+
             })
         return embeddings_with_data

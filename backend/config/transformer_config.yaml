@@ -1,8 +1,8 @@
 embedding:
   type: "transformer"
   config:
-    model_name: "mrm8488/bert-base-spanish-wwm-cased-finetuned-spa-squad2-es"
-    # "bert-base-multilingual-uncased" 
+    model_name: #"mrm8488/bert-base-spanish-wwm-cased-finetuned-spa-squad2-es"
+     "bert-base-multilingual-uncased" 
     # "bert-base-multilingual-cased" 
     # "gamallo/bert-base-gl-cased-finetuned"
     # "gamallo/bert-base-gl-cased-finetuned-cola"
@@ -12,6 +12,8 @@ embedding:
     # "dccuchile/bert-base-spanish-wwm-uncased"
     # "PlanTL-GOB-ES/roberta-base-bne"
     # "mrm8488/bert-base-spanish-wwm-cased-finetuned-spa-squad2-es"
+    # "fpuentes/gpt2-galician"
+    
     max_length: 512
   training_data_path: "data/bc_datos.xlsx"
 

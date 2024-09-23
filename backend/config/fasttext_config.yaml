@@ -2,14 +2,16 @@ embedding:
   type: "fasttext"  # or "transformer" or other embedding types
   config:
     model: 'cbow'
-    dim: 300
-    epoch: 10
-    lr: 0.05
-    wordNgrams: 2
+    dim: 500
+    epoch: 20
+    lr: 0.1
+    wordNgrams: 3
     minn: 2
     maxn: 5
     thread: 4
   training_data_path: "data/bc_datos.xlsx"
+
+model_path: "./fasttext_model.bin"
 
 evaluation:
   articles_file: "data/bc_datos.xlsx"

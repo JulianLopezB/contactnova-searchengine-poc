@@ -60,10 +60,10 @@ def evaluate_engine(config_path):
     return embedding
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Evaluate search engine embeddings")
-    parser.add_argument("config", help="Path to configuration file")
-    args = parser.parse_args()
+  #  parser = argparse.ArgumentParser(description="Evaluate search engine embeddings")
+   # parser.add_argument("config", help="Path to configuration file")
+    #args = parser.parse_args()
 
-    logger.info(f"Starting evaluation with config file: {args.config}")
-    evaluate_engine(args.config)
+    #logger.info(f"Starting evaluation with config file: {args.config}")
+    evaluate_engine(f'config/fasttext_config.yaml')
     logger.info("Evaluation completed")

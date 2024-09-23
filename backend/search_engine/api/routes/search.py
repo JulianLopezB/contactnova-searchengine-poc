@@ -18,6 +18,7 @@ router = APIRouter()
 embedding_type = os.getenv("EMBEDDING_TYPE")
 config_file_path = os.getenv("CONFIG_FILE_PATH")
 
+
 with open(config_file_path, "r") as file:
     config = yaml.safe_load(file)
 
